@@ -33,6 +33,7 @@
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
+  text-decoration: none;
 }
 
 /* Position and style the close button (top right corner) */
@@ -54,4 +55,60 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+.cursor {
+  animation: blink 0.7s infinite;
+}
+
+.login {
+  display: none;
+}
+
+#login_btn {
+  z-index: 2;
+  position: relative;
+}
+
+.main_page {
+  display: none;
+}
+
+button , a {
+  cursor: pointer;
+}
+
+.login {
+  position: relative;
+  z-index: 2;
+}
+
+.main_page {
+  position: relative;
+  z-index: 3;
+}
+
+/* gives top margin to every container modal */
+.container {
+  margin-top: 60px;
+}
+
+.container.start {
+  margin-top: 100px;
 }
