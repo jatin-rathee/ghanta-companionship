@@ -1,101 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Ghanta : chat app</title>
-    <link rel="stylesheet" href="css/particles.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  </head>
-  <body>
-    <div class="container start">
-      <div class="jumbotron border shadow text-center">
-        <h1 class="display-4 text-center text-danger">Welcome</h1>
-        <h1 class="display-4 text-center text-danger">
-          To <span class="typed"></span>
-        </h1>
-        <button class="btn btn-outline-success mr-2" id="login_btn">
-          Log in
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ghanta : chat app</title>
+  <link rel="stylesheet" href="css/particles.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+</head>
+
+<body>
+  <div class="container start">
+    <div class="jumbotron border shadow text-center">
+      <h1 class="display-4 text-center text-danger">Welcome</h1>
+      <h1 class="display-4 text-center text-danger">
+        To <span class="typed"></span>
+      </h1>
+      <button class="btn btn-outline-success mr-2" id="login_btn">
+        Log in
+      </button>
+    </div>
+  </div>
+
+  <div class="container login">
+    <div class="jumbotron shadow text-center">
+      <h1 class="display-4 text-center text-danger">Login</h1>
+      <h1 class="display-4 text-center text-danger">
+        To <span class="typed"></span>
+      </h1>
+      <form class="needs-validation">
+        <div class="form-group">
+          <label for="nickName">Nickname</label>
+          <input type="text" class="form-control" id="nickName" placeholder="Enter Nickname" required />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required />
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" required />
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button class="btn btn-outline-success mr-2" id="submit_btn">
+          Submit
         </button>
-      </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="main_page">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;
+      </a>
+      <h1 class="display-6 text-white pl-3">Users</h1>
+      <a href="#">User 1</a>
     </div>
 
-    <div class="container login">
-      <div class="jumbotron shadow text-center">
-        <h1 class="display-4 text-center text-danger">Login</h1>
-        <h1 class="display-4 text-center text-danger">
-          To <span class="typed"></span>
+    <div id="main">
+      <div class="container jumbotron">
+        <h1 class="display-5 text-center">
+          Enter a chat to start conversation.
         </h1>
-        <form class="needs-validation">
-          <div class="form-group">
-            <label for="nickName">Nickname</label>
-            <input
-              type="text"
-              class="form-control"
-              id="nickName"
-              placeholder="Enter Nickname"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              placeholder="Password"
-              required
-            />
-          </div>
-          <div class="form-group form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-              required
-            />
-            <label class="form-check-label" for="exampleCheck1"
-              >Check me out</label
-            >
-          </div>
-          <button class="btn btn-outline-success mr-2" id="submit_btn">
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <div class="main_page">
-      <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-          >&times;
-        </a>
-        <h1 class="display-6 text-white pl-3">Users</h1>
-        <a href="#">User 1</a>
-      </div>
-
-      <div id="main">
-        <div class="container jumbotron">
-          <h1 class="display-5 text-center">
-            Enter a chat to start conversation.
-          </h1>
-          <div class="text-center">
-            <span onclick="openNav()"
-              ><p class="btn btn-info mt-2">Enter Chat</p>
-            </span>
-          </div>
+        <div class="text-center">
+          <span onclick="openNav()">
+            <p class="btn btn-info mt-2">Enter Chat</p>
+          </span>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="particles-js"></div>
-    <script src="javascript/typed_cfg.js"></script>
-    <script src="javascript/particles.js"></script>
-    <script src="javascript/script.js"></script>
-    <script src="javascript/particles-cfg.js"></script>
-  </body>
+  <div id="particles-js"></div>
+  <script src="javascript/typed_cfg.js"></script>
+  <script src="javascript/particles.js"></script>
+  <script src="javascript/script.js"></script>
+  <script src="javascript/particles-cfg.js"></script>
+</body>
+
 </html>
